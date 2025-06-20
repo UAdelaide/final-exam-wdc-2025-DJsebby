@@ -14,7 +14,8 @@ methods:{
         const res = await response.json();
         this.imageURL = res.message;
 
-        
+
     }
-}
+},
+
 })
