@@ -8,7 +8,7 @@ router.get('/dogs', async (req, res) => {
     try {
         const dbProm = await adProm;
         const [rows] = await.execute('
-            SELECT')
+            SELECT Dogs.name, Dogs.size, User.u')
             res.json(rows);
     } catch {
         res.json
