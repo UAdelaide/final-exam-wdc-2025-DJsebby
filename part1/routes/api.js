@@ -13,6 +13,7 @@ router.get('/dogs', async (req, res) => {
             JOIN Dogs d ON wr.dog_id = d.dog_id
             WHERE wr.status = 'open'
             ');
+            res.json(rows);
     } catch {
 
     }
