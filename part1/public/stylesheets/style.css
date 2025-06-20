@@ -24,4 +24,6 @@ img {
   background-color: bisque;
 }
 
-#
+#text {
+  float: right;
+}
