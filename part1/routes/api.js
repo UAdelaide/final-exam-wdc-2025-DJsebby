@@ -6,7 +6,7 @@ const { router } = require('../app');
 router.get('/dogs', async (req, res) => {
     try {
         const dbProm = await adProm;
-        const
+        const 
     } catch {
 
     }
