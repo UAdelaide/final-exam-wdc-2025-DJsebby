@@ -6,5 +6,9 @@ createApp({
             imageURL: '' ,
             breedName: '',
         }
-    }
+    },
+
+methods:{
+    
+}
 })
