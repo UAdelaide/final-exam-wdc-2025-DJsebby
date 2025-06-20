@@ -36,7 +36,7 @@ router.get('/walkers/summary', async (req, res) => {
         const [rows] = await db.execute(`
             SELECT username AS walker, COUNT(*) AS walks_completed
             FROM users
-            JOIN Dogs d ON wr.dog_id = d.dog_id
+            JOIN WalkApplications ON WalkAppli d ON wr.dog_id = d.dog_id
             WHERE wr.status = 'open' `);
             res.json(rows);
     } catch {
