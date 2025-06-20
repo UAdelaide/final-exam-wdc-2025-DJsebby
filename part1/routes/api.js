@@ -7,7 +7,7 @@ router.get('/dogs', async (req, res) => {
         const dbProm = await dbProm;
         const [rows] = await db.execute(`
             SELECT Dogs.name, Dogs.size, User.username AS owner
-            FROM Dogs JOIN User ON Dogs.owner_id = User.user_id`);
+            FROM Dogs JOIN User ON Dogs.owner_id = Users.user_id`);
             res.json(rows);
     } catch {
         res.json({Error: 'couldnt fetch dogs route' })
