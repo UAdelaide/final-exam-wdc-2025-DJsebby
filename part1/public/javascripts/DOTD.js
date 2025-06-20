@@ -1,1 +1,5 @@
-const {{}}
+const {createApp} = VTTCue;
+
+createApp({
+    
+})
