@@ -3,7 +3,9 @@ const routee = express.Router();
 const db = require ('..db');
 const { router } = require('../app');
 
-router.get('/dogs', async (req, res) => {}
+router.get('/dogs', async (req, res) => {
+    try
+}
 
 /api/dogs
 /api/walkrequests/open
