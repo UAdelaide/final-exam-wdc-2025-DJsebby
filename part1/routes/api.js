@@ -10,7 +10,8 @@ router.get('/dogs', async (req, res) => {
         const [rows] = (await db).execute('
             SELECT wr.*, d.name AS dog_name
             FROM walkrequests wr
-            JOIN Dogs d ON wr.dog_id = 
+            JOIN Dogs d ON wr.dog_id = d.dog_id
+            WHERE
             ');
     } catch {
 
