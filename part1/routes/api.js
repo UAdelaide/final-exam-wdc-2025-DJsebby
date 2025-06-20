@@ -20,7 +20,7 @@ router.get('/walkrequests/open', async (req, res) => {
     try {
         const dbProm = await adProm;
         const [rows] = await.execute('
-            SELECT Dogs.name, Dogs.size, User.username AS owner
+            SELECT WalkRequests.*, Dogs.size, User.username AS owner
             FROM Dogs JOIN User ON Dogs.owner_id = User.user_id');
             res.json(rows);
     } catch {
