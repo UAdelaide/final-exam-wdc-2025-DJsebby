@@ -4,7 +4,7 @@ const dbProm = require ('../db');
 
 router.get('/dogs', async (req, res) => {
     try {
-        const dbProm = await adProm;
+        const dbProm = await dbProm;
         const [rows] = await db.execute(`
             SELECT Dogs.name, Dogs.size, User.username AS owner
             FROM Dogs JOIN User ON Dogs.owner_id = User.user_id`);
@@ -16,7 +16,7 @@ router.get('/dogs', async (req, res) => {
 
 router.get('/walkrequests/open', async (req, res) => {
     try {
-        const dbProm = await adProm;
+        const dbProm = await dbProm;
         const [rows] = await db.execute(`
             SELECT WalkRequests.*, Dogs.name AS dog_name
             FROM WalkRequests
@@ -30,7 +30,7 @@ router.get('/walkrequests/open', async (req, res) => {
 
 router.get('/walkers/summary', async (req, res) => {
     try {
-        const dbProm = await adProm;
+        const dbProm = await dbProm;
         const [rows] = await db.execute(`
             SELECT username AS walker, COUNT(*) AS walks_completed
             FROM users
