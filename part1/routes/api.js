@@ -9,7 +9,7 @@ router.get('/dogs', async (req, res) => {
         const dbProm = await adProm;
         const [rows] = await.execute('
             SELECT Dogs.name, Dogs.size, User.username AS owner
-            FROM Dogs')
+            FROM Dogs JOIN User ON Dogs')
             res.json(rows);
     } catch {
         res.json
