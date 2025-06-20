@@ -11,7 +11,7 @@ router.get('/dogs', async (req, res) => {
             SELECT wr.*, d.name AS dog_name
             FROM walkrequests wr
             JOIN Dogs d ON wr.dog_id = d.dog_id
-            WHERE wr.status = 'open';
+            WHERE wr.status = 'open'
             ');
     } catch {
 
