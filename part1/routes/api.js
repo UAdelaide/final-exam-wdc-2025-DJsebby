@@ -8,7 +8,8 @@ router.get('/dogs', async (req, res) => {
     try {
         const dbProm = await adProm;
         const [rows] = await.execute('
-            SELECT Dogs.name, Dogs.size, User.username AS owner FROM Dogs JOIN User ON Dogs.owner_id = User.user_id');
+            SELECT Dogs.name, Dogs.size, User.username AS owner
+            FROM Dogs JOIN User ON Dogs.owner_id = User.user_id');
             res.json(rows);
     } catch {
         res.json({Error: 'couldnt fetch dogs route' })
@@ -19,7 +20,9 @@ router.get('/walkrequests/open', async (req, res) => {
     try {
         const dbProm = await adProm;
         const [rows] = await.execute(`
-            SELECT WalkRequests.*, Dogs.name AS dog_name FROM WalkRequests JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id WHERE WalkRequests.status = 'open' `);
+            SELECT WalkRequests.*, Dogs.name AS dog_name
+            FROM WalkRequests JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+            WHERE WalkRequests.status = 'open' `);
             res.json(rows);
     } catch {
         res.json({Error: 'couldnt fetch dogs route' })
