@@ -12,10 +12,10 @@ router.get('/dogs', async (req, res) => {
             FROM Dogs JOIN User ON Dogs.owner_id = User.user_id');
             res.json(rows);
     } catch {
-        res.json({Error: '' })
+        res.json({Error: 'couldnt fetch dogs route' })
     }
 }
 
-/api/dogs
+
 /api/walkrequests/open
 /api/walkers/summary
