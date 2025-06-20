@@ -34,8 +34,8 @@ router.get('/walkers/summary', async (req, res) => {
     try {
         const dbProm = await adProm;
         const [rows] = await db.execute(`
-            SELECT username AS walker, 
-            FROM WalkRequests wr
+            SELECT username AS walker, COUNT(*) AS walks_completed
+            FROM users
             JOIN Dogs d ON wr.dog_id = d.dog_id
             WHERE wr.status = 'open' `);
             res.json(rows);
