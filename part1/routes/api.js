@@ -1,7 +1,9 @@
 const express = require('express');
 const routee = express.Router();
 const db = require ('..db');
+const { router } = require('../app');
 
+router.get('/dogs', async (req, res) => {}
 
 /api/dogs
 /api/walkrequests/open
