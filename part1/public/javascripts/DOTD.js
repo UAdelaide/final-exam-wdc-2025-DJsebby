@@ -10,7 +10,7 @@ createApp({
 
 methods:{
     async loadDog(){
-        const response = await fetch ('')
+        const response = await fetch ('https://dog.ceo/api/breeds/image/random')
     }
 }
 })
