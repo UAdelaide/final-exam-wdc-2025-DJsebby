@@ -7,7 +7,7 @@ const db = require('../db');
 router.get('/dogs', async (req, res) => {
     try {
         const dbProm = await adProm;
-    
+        const [rows] = 
             res.json(rows);
     } catch {
         res.json
