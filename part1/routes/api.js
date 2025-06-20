@@ -9,7 +9,8 @@ router.get('/dogs', async (req, res) => {
         const dbProm = await adProm;
         const [rows] = (await db).execute('
             SELECT wr.*, d.name AS dog_name
-            
+            FROM walkrequests wr
+            JOIN Dogs
             ');
     } catch {
 
