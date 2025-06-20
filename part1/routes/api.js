@@ -37,7 +37,7 @@ router.get('/walkers/summary', async (req, res) => {
             SELECT wr.request_id, wr.requested_time, wr.duration_minutes, wr.location, d.name AS dog_name
             FROM WalkRequests wr
             JOIN Dogs d ON wr.dog_id = d.dog_id
-            WHERE WalkRequests.status = 'open' `);
+            WHERE wr.status = 'open' `);
             res.json(rows);
     } catch {
         res.json({Error: 'couldnt fetch walkrequests route' })
