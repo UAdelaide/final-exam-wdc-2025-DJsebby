@@ -10,7 +10,7 @@ createApp({
 
 methods:{
     async loadDog(){
-        const res
+        const response = await fetch ('')
     }
 }
 })
