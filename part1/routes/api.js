@@ -38,7 +38,6 @@ router.get('/walkers/summary', async (req, res) => {
             FROM users
             JOIN WalkApplications ON WalkApplications.walker_id = Users.user_id
             JOIN WalkRequests ON WalkRequests.request_id = WalkApplications.request_id
-            
             WHERE wr.status = 'open' `);
             res.json(rows);
     } catch {
