@@ -18,6 +18,6 @@ methods:{
     }
 },
 mounted(){
-    this.loadDog
+    this.loadDog();
 }
-})
+}).mount('')
