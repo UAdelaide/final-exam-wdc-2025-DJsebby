@@ -9,6 +9,8 @@ createApp({
     },
 
 methods:{
-    
+    async loadDog(){
+        const res
+    }
 }
 })
