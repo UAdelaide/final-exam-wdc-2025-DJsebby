@@ -1,5 +1,5 @@
 const express = require('express');
-const db
+const db = 
 /api/dogs
 /api/walkrequests/open
 /api/walkers/summary
