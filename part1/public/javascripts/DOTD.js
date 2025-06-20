@@ -17,5 +17,7 @@ methods:{
 
     }
 },
-
+mounted(){
+    this.loadDog
+}
 })
