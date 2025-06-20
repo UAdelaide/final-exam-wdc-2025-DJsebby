@@ -4,7 +4,11 @@ const db = require ('..db');
 const { router } = require('../app');
 
 router.get('/dogs', async (req, res) => {
-    try
+    try {
+        
+    } catch {
+
+    }
 }
 
 /api/dogs
