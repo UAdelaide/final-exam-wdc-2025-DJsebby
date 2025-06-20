@@ -33,7 +33,7 @@ router.get('/walkers/summary', async (req, res) => {
     try {
         const dbProm = await adProm;
         const [rows] = await db.execute(`
-            SELECT wr.request_id, wr.request_id.name AS dog_name
+            SELECT wr.request_id, wr.requested_time, wr.duration_minutes,  AS dog_name
             FROM WalkRequests JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
             WHERE WalkRequests.status = 'open' `);
             res.json(rows);
