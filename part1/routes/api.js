@@ -19,8 +19,7 @@ router.get('/walkrequests/open', async (req, res) => {
     try {
         const dbProm = await adProm;
         const [rows] = await.execute('
-            SELECT WalkRequests.*, Dogs.name AS dog_name AS FROM WalkRequests JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
-            where');
+            SELECT WalkRequests.*, Dogs.name AS dog_name FROM WalkRequests JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id where');
             res.json(rows);
     } catch {
         res.json({Error: 'couldnt fetch dogs route' })
