@@ -20,4 +20,4 @@ methods:{
 mounted(){
     this.loadDog();
 }
-}).mount('')
+}).mount('#app');
