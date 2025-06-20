@@ -38,7 +38,7 @@ router.get('/walkers/summary', async (req, res) => {
             FROM users
             JOIN WalkApplications ON WalkApplications.walker_id = Users.user_id
             JOIN WalkRequests ON WalkRequests.request_id = WalkApplications.request_id
-            WHERE role = 'walker' AND WalkRequests.status = 'completed' ADN `);
+            WHERE role = 'walker' AND WalkRequests.status = 'completed' AND WalkApplications.status = 'accepted' `);
             res.json(rows);
     } catch {
         res.json({Error: 'couldnt fetch walkrequests route' })
