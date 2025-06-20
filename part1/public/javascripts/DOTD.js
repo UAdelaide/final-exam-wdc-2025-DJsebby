@@ -1,4 +1,4 @@
-const {createApp} = VTTCue;
+const {createApp} = Vue;
 
 createApp({
     data(){
