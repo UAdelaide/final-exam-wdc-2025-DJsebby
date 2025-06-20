@@ -37,7 +37,7 @@ router.get('/walkers/summary', async (req, res) => {
             SELECT username AS walker, COUNT(*) AS walks_completed
             FROM users
             JOIN WalkApplications ON WalkApplications.walker_id = Users.user_id
-            JOIN WalkRequests ON WalkRequests.request = Users.user_id
+            JOIN WalkRequests ON WalkRequests.request_id = WalkApplications.
             WHERE wr.status = 'open' `);
             res.json(rows);
     } catch {
