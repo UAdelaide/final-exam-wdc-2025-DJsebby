@@ -90,7 +90,7 @@ router.post('/logout', async (req, res) => {
         FROM Dogs
         WHERE owner_id = ?
         `, [owner_id]);
-        // 
+        // json to return the dogs
       res.json(dogs);
     } catch (error) {
       res.json({ error: 'couldnt load in dogs' });
