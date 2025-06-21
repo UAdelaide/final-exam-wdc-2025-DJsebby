@@ -59,4 +59,28 @@ router.post('/login', async (req, res) => {
   }
 });
 
+/ POST login (dummy version)
+router.post('/login', async (req, res) => {
+  // reads username and password
+  const { username, password } = req.body;
+
+  try {
+    // queries the database and gets user info
+    const [rows] = await db.query(`
+      SELECT user_id, username, role FROM Users
+      WHERE username = ? AND password_hash = ?
+    `, [username, password]);
+// if no user is found must be invalid credentials
+    if (rows.length === 0) {
+      return res.status(401).json({ error: 'Invalid credentials' });
+    }
+    // if user is found save info in session
+    req.session.user = rows[0];
+    // respond with user info
+    res.json({ message: 'Login successful', user: rows[0] });
+  } catch (error) {
+    res.status(500).json({ error: 'Login failed' });
+  }
+});
+
 module.exports = router;
