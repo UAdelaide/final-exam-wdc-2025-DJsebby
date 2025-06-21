@@ -12,7 +12,7 @@
 <body class="bg-light">
   <div id="app" class="container py-4">
     <h1 class="mb-4 text-primary">Owner Dashboard</h1>
-        <!-- added a button to log out. onclick it calls logout method -->
+    <!-- added a button to log out. onclick it calls logout method -->
     <button type="button" @click="logout">Logout</button>
     <!-- Walk request form -->
     <div class="card mb-4">
@@ -122,19 +122,25 @@
           loadWalks();
         });
 
+        // vue method to handle logouts
         async function logout() {
           try {
+            // send a POST request to the logou route
             const res = await fetch('/api/users/logout', { method: 'POST' });
+            // if server gives a sucess we log them out by moving to a new html
             if (res.ok) {
               window.location.href = 'index.html';
             }
             else {
+              // otherwise we send a console log saying we failed
               console.log('logout failed');
             }
           } catch (err) {
+            // console log for if it fails in the try-catch par
             console.log('logout try failed');
           }
         }
+
 
         return {
           form,
