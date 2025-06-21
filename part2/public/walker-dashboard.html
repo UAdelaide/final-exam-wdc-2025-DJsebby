@@ -96,9 +96,10 @@
           }
         }
 
-        // function to fetch the users information form the server and then save the 
+        // function to fetch the users information form the server and then save the user id
         async function getCurrentUser() {
           try {
+            
             const res = await fetch('/api/users/me');
             if (res.ok) {
               const data = await res.json();
