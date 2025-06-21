@@ -95,7 +95,11 @@
             if (res.ok) {
               const dogData = await res.json();
 
-              this.dogs = 
+              this.dogs = [];
+
+              for (const dog of dogData){
+                dog.pic = 
+              }
 
 
             }
