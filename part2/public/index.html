@@ -99,7 +99,7 @@
               const dogData = await res.json();
               // once we've gotten a response clear previous data
               this.dogs = [];
-              // loop thtough the data pushing the 
+              // loop thtough the data pushing the dogData and the new random picture 
               for (const dog of dogData) {
                 const response = await fetch('https://dog.ceo/api/breeds/image/random');
                 const res = await response.json();
