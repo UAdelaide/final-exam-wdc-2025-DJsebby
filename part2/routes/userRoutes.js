@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
     `, [username, password]);
-// if no user is found must be invalid credentials
+    // if no user is found must be invalid credentials
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
@@ -60,14 +60,14 @@ router.post('/login', async (req, res) => {
 });
 
 // logout route
-router.post('/login', async (req, res) => {
-  req.session.destroy(err =>{
+router.post('/logout', async (req, res) => {
+  req.session.destroy(err => {
     if (err) {
-      return res.json({ error: 'logout failed in route'})
+      return res.json({ error: 'logout failed in route' })
     }
     // clear cookie from browser
     res.clearCookie('connec.sid');
-    res.json({message : 'logout successful!'});
+    res.json({ message: 'logout successful!' });
   });
 
 });
