@@ -83,8 +83,10 @@ router.post('/logout', async (req, res) => {
     try {
       const owner_id  = req.session.user.user_id;
       const [dogs] = await db.query(`
-        SELECT dog_id, name, FROM Dogs
-        
+        SELECT dog_id, name,
+        FROM Dogs
+        WHERE owner_id = ?
+
         `)
     } catch (error) {
 
