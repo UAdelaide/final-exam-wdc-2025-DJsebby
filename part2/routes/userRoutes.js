@@ -82,7 +82,7 @@ router.post('/logout', async (req, res) => {
     }
 
     try {
-      // get the ow
+      // get the owner id from user_id
       const owner_id = req.session.user.user_id;
       const [dogs] = await db.query(`
         SELECT dog_id, name
