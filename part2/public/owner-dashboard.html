@@ -85,7 +85,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        // variable to hld the list of dogs 
+        // variable to hld the list of dogs
         const dogs = ref([]);
 
         async function loadWalks() {
@@ -125,6 +125,7 @@
 
         onMounted(() => {
           loadWalks();
+          // loads the dogs for the dropdown as the page loads
           getDogs();
         });
 
