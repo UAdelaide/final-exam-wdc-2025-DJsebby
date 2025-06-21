@@ -97,14 +97,14 @@
 
               this.dogs = [];
 
-              for (const dog in dogData){
+              for (const dog in dogData) {
                 dog.pic = '';
-                this.dogs.push(dog)
+                this.dogs.push(dog);
               }
             }
-            else{
-                cosole.log("error with response")
-              }
+            else {
+              cosole.log("error with laoding in dog data");
+            }
           } catch (error) {
             console.log("fetching error")
           }
