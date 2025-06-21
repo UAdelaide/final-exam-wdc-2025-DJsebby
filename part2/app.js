@@ -19,10 +19,12 @@ app.use(session({
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
+// route to add in part 1 route
 const dogRoutes = require('../part1/routes/api.js');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
+// using this route
 app.use('/api/', dogRoutes);
 
 // Export the app instead of listening here
