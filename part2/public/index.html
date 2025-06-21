@@ -98,7 +98,9 @@
               this.dogs = [];
 
               for (const dog of dogData) {
-                dog.pic = imgJson;
+                const response = await fetch('https://dog.ceo/api/breeds/image/random');
+                const res = await response.json();
+                dog.pic = res.message;
                 this.dogs.push(dog);
               }
             }
