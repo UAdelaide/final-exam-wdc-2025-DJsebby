@@ -74,14 +74,14 @@ router.post('/logout', async (req, res) => {
   });
 
 
-  router.get('/dogsIDs', async (req,res) =>{
+  router.get('/dogsIDs', async (req, res) =>{
     // check if user is logged in first with the cookie
     if (!req.session.user){
       return res.json({ error: 'not logged in'});
     }
 
     try {
-      const owner_id  = req.session.user.user_id;
+      const owner_id = req.session.user.user_id;
       const [dogs] = await db.query(`
         SELECT dog_id, name,
         FROM Dogs
@@ -89,7 +89,7 @@ router.post('/logout', async (req, res) => {
         `, [owner_id]);
         res.json(dogs);
     } catch (error) {
-      res.json({ error: 'not logged in'});
+      res.json({ error: 'couldnt load in dogs'});
     }
   });
 
