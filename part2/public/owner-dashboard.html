@@ -23,7 +23,7 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Dog ID</label>
-            <!-- v-model  -->
+            <!-- v-model binds value with form.id -->
             <select v-model="form.dog_id" class="form-control" required>
               <option v-for="dog in dogs" :value="dog.dog_id">{{dog.name}}</option>
             </select>
