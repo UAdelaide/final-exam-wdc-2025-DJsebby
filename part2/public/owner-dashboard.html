@@ -151,8 +151,9 @@
         // function to get the dogs from the owner
         async function getDogs() {
           try {
-            // makes a get request to the 
+            // makes a get request to the dogIDs route
             const res = await fetch('/api/users/dogIDs');
+            // if successful we 
             if (res.ok) {
               dogs.value = await res.json();
             }
