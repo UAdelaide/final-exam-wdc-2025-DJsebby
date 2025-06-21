@@ -81,7 +81,7 @@
           try {
             // send a POST request to the logou route
             const res = await fetch('/api/users/logout', { method: 'POST' });
-            // if server gives a sucess we 
+            // if server gives a sucess we log them out by moving to a new html
             if (res.ok) {
               window.location.href = 'index.html';
             }
