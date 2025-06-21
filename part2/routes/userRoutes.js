@@ -64,11 +64,12 @@ router.post('/logout', async (req, res) => {
   // destror the session removing its data
   req.session.destroy(err => {
     if (err) {
-      // if error 
+      // if error json saying where the error happened
       return res.json({ error: 'logout failed in route' });
     }
     // clear cookie from browser
     res.clearCookie('connect.sid');
+    
     res.json({ message: 'logout successful!' });
   });
 
