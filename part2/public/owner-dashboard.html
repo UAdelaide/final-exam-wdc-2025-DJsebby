@@ -153,7 +153,7 @@
           try {
             // makes a get request to the dogIDs route
             const res = await fetch('/api/users/dogIDs');
-            // if successful we 
+            // if successful we store the response in the dogs list 
             if (res.ok) {
               dogs.value = await res.json();
             }
