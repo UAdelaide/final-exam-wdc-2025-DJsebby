@@ -97,7 +97,10 @@
 
               this.dogs = [];
 
-              for (const dog in dogData)
+              for (const dog in dogData){
+                dog.pic = '';
+                this.dogs.push(dog)
+              }
 
 
 
