@@ -74,6 +74,7 @@ router.post('/logout', async (req, res) => {
   });
 
 
+  // route to the 
   router.get('/dogIDs', async (req, res) => {
     // check if user is logged in first with the cookie
     if (!req.session.user) {
