@@ -76,12 +76,13 @@ router.post('/logout', async (req, res) => {
 
   // route to get the dogs depending on the owner
   router.get('/dogIDs', async (req, res) => {
-    // check if user is logged in first with the cookie
+    // check if user is logged in first with sesison
     if (!req.session.user) {
       return res.json({ error: 'not logged in' });
     }
 
     try {
+      // get the ow
       const owner_id = req.session.user.user_id;
       const [dogs] = await db.query(`
         SELECT dog_id, name
