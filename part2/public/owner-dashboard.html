@@ -144,7 +144,9 @@
         async function getDogs(){
           try {
             const res = await fetch ('/api/users/dogIDs');
-            
+            if (res.ok) {
+              
+            }
           } catch (error) {
 
           }
