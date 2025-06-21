@@ -27,13 +27,13 @@
     <h3>All Registered Dogs</h3>
     <table>
       <thead>
-      <tr>
-        <th>Dog ID</th>
-        <th>Name</th>
-        <th>Size</th>
-        <th>Owner ID</th>
-        <th>Photo</th>
-      </tr>
+        <tr>
+          <th>Dog ID</th>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Owner ID</th>
+          <th>Photo</th>
+        </tr>
       </thead>
       <tbody>
         <tr v-for="dog in dogs" :key="dog.dog_id">
@@ -89,10 +89,10 @@
 
         }
 
-        async loadInDogs(){
+        async loadInDogs() {
           try {
-            const res = await fetch ('part1/routes/api/dogs')
-            if (res.ok){
+            const res = await fetch('part1/routes/api/dogs')
+            if (res.ok) {
               const dogData = await res.json();
 
 
@@ -104,7 +104,11 @@
           }
         }
 
+      },
+      mounted() {
+        loadInDogs();
       }
+
     }).mount('#app');
   </script>
 
