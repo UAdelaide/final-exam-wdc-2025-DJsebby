@@ -145,7 +145,7 @@
           try {
             const res = await fetch ('/api/users/dogIDs');
             if (res.ok) {
-              
+              dogs.value = await res.json();
             }
           } catch (error) {
 
