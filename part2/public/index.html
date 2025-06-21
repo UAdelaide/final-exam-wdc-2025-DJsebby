@@ -89,9 +89,10 @@
 
         },
 
-        // function to load in the dog information for the table using 
+        // function to load in the dog information for the table using route from part 1
         async loadInDogs() {
           try {
+            // fetching route doges from part 1
             const res = await fetch('/api/dogs')
             if (res.ok) {
               const dogData = await res.json();
