@@ -102,9 +102,8 @@
             if (res.ok) {
               const data = await res.json();
               user = data.user.user_id;
-              
             } else {
-
+              error
             }
           } catch (error) {
 
