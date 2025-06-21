@@ -76,9 +76,10 @@
             message.value = '';
           }
         }
+        v
         async function logout() {
           try {
-            // send a POST request to tthe 
+            // send a POST request to the logou route
             const res = await fetch('/api/users/logout', { method: 'POST' });
             if (res.ok) {
               window.location.href = 'index.html';
