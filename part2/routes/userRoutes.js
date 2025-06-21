@@ -73,7 +73,9 @@ router.post('/logout', async (req, res) => {
     res.json({ message: 'logout successful!' });
   });
 
-  router.get(/dogsIDs, async (req,res))
+  router.get(/dogsIDs, async (req,res) =>{
+    
+  })
 
 });
 
