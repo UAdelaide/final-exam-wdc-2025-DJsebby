@@ -86,7 +86,8 @@ router.post('/logout', async (req, res) => {
         SELECT dog_id, name,
         FROM Dogs
         WHERE owner_id = ?
-        `, [owner_id])
+        `, [owner_id]);
+        res.json(dogs);
     } catch (error) {
 
     }
