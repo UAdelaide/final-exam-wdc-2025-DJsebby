@@ -43,7 +43,7 @@
         // creates the login method that is called by form
         async login() {
           try {
-            // fetches data in json form from the post request 
+            // makes post request with username and password as json
             const response = await fetch('/api/users/login', {
               method: 'POST',
               headers: { 'Content-type': 'application/json' },
