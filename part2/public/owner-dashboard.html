@@ -148,9 +148,10 @@
           }
         }
 
-        // function to get the dogs form the owner
+        // function to get the dogs from the owner
         async function getDogs() {
           try {
+            // makes a get request to the 
             const res = await fetch('/api/users/dogIDs');
             if (res.ok) {
               dogs.value = await res.json();
