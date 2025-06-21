@@ -82,7 +82,8 @@ router.post('/logout', async (req, res) => {
 
     try {
       const owner_id  = req.session.user.user_id;
-      
+      const [dogs] = await db.query(`
+        `)
     } catch (error) {
 
     }
