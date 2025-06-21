@@ -25,7 +25,7 @@
             <label class="form-label">Dog ID</label>
             <!-- v-model binds selected value with form.id -->
             <select v-model="form.dog_id" class="form-control" required>
-              <!-- v-for loops through all dogs and fr each one creates and option -->
+              <!-- v-for loops through all dogs and foor each one creates and option with their name atached to it-->
               <option v-for="dog in dogs" :value="dog.dog_id">{{dog.name}}</option>
             </select>
           </div>
