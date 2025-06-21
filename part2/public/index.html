@@ -40,7 +40,9 @@
           try {
             const res = await fetch ('/login', {
               method: 'POST',
-              headers: {}
+              body: JSON.stringify({
+                username
+              })
             })
 
           } catch{
