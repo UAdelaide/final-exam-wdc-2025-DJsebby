@@ -89,7 +89,7 @@ router.post('/logout', async (req, res) => {
         `, [owner_id]);
         res.json(dogs);
     } catch (error) {
-
+      res.json({ error: 'not logged in'});
     }
   });
 
