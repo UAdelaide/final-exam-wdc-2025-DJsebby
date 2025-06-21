@@ -92,7 +92,9 @@
         async loadInDogs(){
           try {
             const res = await fetch ('part1/api/dogs')
-            if (res.ok)
+            if (res.ok){
+              const dogData = await res
+            }
           } catch (error) {
 
           }
