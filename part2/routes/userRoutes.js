@@ -73,7 +73,7 @@ router.post('/logout', async (req, res) => {
     res.json({ message: 'logout successful!' });
   });
 
-  route
+  router.get
 
 });
 
