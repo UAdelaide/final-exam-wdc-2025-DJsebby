@@ -101,9 +101,9 @@
             const res = await fetch('/api/users/me');
             if (res.ok) {
               const data = await res.json();
-              user = data.user.user_id;
+              user.value = data.user.user_id;
             } else {
-              error
+              error.value = 'couldnt get user info'
             }
           } catch (error) {
 
