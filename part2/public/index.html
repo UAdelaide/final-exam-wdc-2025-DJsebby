@@ -54,7 +54,7 @@
               })
             });
             const result = await response.json();
-            // after recieveing response as json 
+            // after recieveing response as json, check it the user is a walker or owner and redirect
             if (result.user.role === 'owner') {
               window.location.href = "owner-dashboard.html";
             }
