@@ -1,4 +1,4 @@
-const express = require('express'); //
+const express = require('express'); //import express-sesison
 const session = require('express-session');
 const path = require('path');
 require('dotenv').config();
