@@ -43,7 +43,7 @@
         // creates the login method that is called by form
         async login() {
           try {
-            // fetches data 
+            // fetches data in json form from the post request
             const response = await fetch('/api/users/login', {
               method: 'POST',
               headers: { 'Content-type': 'application/json' },
@@ -54,7 +54,7 @@
               })
             });
             const result = await response.json();
-
+            
             if (result.user.role === 'owner') {
               window.location.href = "owner-dashboard.html";
             }
