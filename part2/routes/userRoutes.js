@@ -84,12 +84,13 @@ router.post('/logout', async (req, res) => {
     try {
       // get the owner id from user_id
       const owner_id = req.session.user.user_id;
-      // query the database to return all 
+      // query the database to return all dog from the owner id
       const [dogs] = await db.query(`
         SELECT dog_id, name
         FROM Dogs
         WHERE owner_id = ?
         `, [owner_id]);
+        // 
       res.json(dogs);
     } catch (error) {
       res.json({ error: 'couldnt load in dogs' });
