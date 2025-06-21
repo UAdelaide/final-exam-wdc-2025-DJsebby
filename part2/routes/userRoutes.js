@@ -81,7 +81,8 @@ router.post('/logout', async (req, res) => {
     }
 
     try {
-      const own
+      const owner_id  = req.session.user.user_id;
+      
     } catch (error) {
 
     }
