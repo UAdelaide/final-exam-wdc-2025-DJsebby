@@ -74,12 +74,12 @@ router.post('/logout', async (req, res) => {
   });
 
 
-  router.get(/dogsIDs, async (req,res) =>{
+  router.get('/dogsIDs', async (req,res) =>{
     // check if user is logged in first with the cookie
     if (!req.session.user){
       return res.json({ error: 'not logged in'});
     }
-    
+
   });
 
 });
