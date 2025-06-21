@@ -80,6 +80,11 @@ router.post('/logout', async (req, res) => {
       return res.json({ error: 'not logged in'});
     }
 
+    try {
+      const own
+    } catch (error) {
+
+    }
   });
 
 });
